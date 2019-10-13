@@ -2,15 +2,15 @@
   "name": "number-to-a-language",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "main": "lib/abstract_numerical_unit.js",
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
-    "flow-remove-types": "^2.109.0"
   },
   "devDependencies": {
     "flow-bin": "^0.109.0"
+    "flow-remove-types": "^2.109.0"
   },
   "scripts": {
     "test": "node test.js",
