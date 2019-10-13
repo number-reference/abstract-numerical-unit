@@ -9,9 +9,14 @@
   "dependencies": {
     "flow-remove-types": "^2.109.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "flow-bin": "^0.109.0"
+  },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "build": "flow-remove-types src/ -d lib/",
+    "flow": "flow",
+    "prepublish": "npm run build"
   },
   "author": "Liam Norris",
   "license": "MIT"
