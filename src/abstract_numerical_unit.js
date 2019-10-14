@@ -2,7 +2,7 @@
 
 'use strict';
 
-type numerical = string | number;
+export type numerical = string | number;
 
 module.exports = class AbstractNumericalUnit {
   power: number;
