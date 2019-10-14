@@ -1,5 +1,5 @@
 {
-  "name": "number-to-a-language",
+  "name": "abstract-numerical-unit",
   "version": "1.0.0",
   "description": "",
   "main": "lib/abstract_numerical_unit.js",
@@ -7,17 +7,29 @@
     "lib": "lib"
   },
   "dependencies": {
-  },
-  "devDependencies": {
-    "flow-bin": "^0.109.0"
+    "flow-bin": "^0.109.0",
     "flow-remove-types": "^2.109.0"
   },
+  "devDependencies": {},
   "scripts": {
-    "test": "node test.js",
+    "test": "node lib/abstract_numerical_unit_test.js",
     "build": "flow-remove-types src/ -d lib/",
     "flow": "flow",
     "prepublish": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/number-reference/abstract-numerical-unit.git"
+  },
+  "keywords": [
+    "number",
+    "language",
+    "stack"
+  ],
   "author": "Liam Norris",
-  "license": "MIT"
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/number-reference/abstract-numerical-unit/issues"
+  },
+  "homepage": "https://github.com/number-reference/abstract-numerical-unit#readme"
 }
