@@ -4,18 +4,20 @@
   "description": "",
   "main": "lib/abstract_numerical_unit.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "src": "src",
+    "spec": "spec"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "flow-bin": "^0.109.0",
-    "flow-remove-types": "^2.109.0"
+    "flow-remove-types": "^2.109.0",
+    "jasmine": "^3.5.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "node lib/abstract_numerical_unit_test.js",
-    "build": "flow-remove-types src/ -d lib/",
+    "test": "jasmine",
     "flow": "flow",
-    "prepublish": "npm run build"
+    "prepublish": "flow-remove-types src/ -d lib/"
   },
   "repository": {
     "type": "git",
