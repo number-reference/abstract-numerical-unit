@@ -15,9 +15,10 @@
     "jasmine": "^3.5.0"
   },
   "scripts": {
-    "test": "jasmine",
+    "build": "flow-remove-types src/ -d lib/",
+    "test": "npm run build && jasmine",
     "flow": "flow",
-    "prepublish": "flow-remove-types src/ -d lib/"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
