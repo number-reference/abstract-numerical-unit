@@ -47,6 +47,34 @@ module.exports = class AbstractNumericalUnit {
     return last_unit;
   }
 
+  /*
+   * Returns a copy of this but with the same properties.
+   */
+  copy(): this {
+    return new this.constructor(
+      this.power,
+      this.value,
+      this.next,
+    );
+  }
+
+  /*
+   * Reverse the stack, modifying the original such that the original head is now the tail and vice versa.
+   */
+  invert(): this {
+    let cursor = this.next;
+    let last_head = this;
+    let current_tail = this;
+    current_tail.next = null;
+    while (cursor != null) {
+      last_head = cursor;
+      cursor = cursor.next;
+      last_head.next = current_tail;
+      current_tail = last_head;
+    }
+    return last_head;
+  }
+
   toString(): string {
 		return `AbstractNumericalUnit { p: ${this.power}, v: ${this.value}, n: ${this.next == null ? 'null' : this.next.toString()} }`
   }
