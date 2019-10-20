@@ -61,7 +61,7 @@ module.exports = class AbstractNumericalUnit {
   /*
    * Reverse the stack, modifying the original such that the original head is now the tail and vice versa.
    */
-  invert(): this {
+  reverse(): this {
     let cursor = this.next;
     let last_head = this;
     let current_tail = this;
