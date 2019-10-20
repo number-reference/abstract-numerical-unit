@@ -4,9 +4,7 @@
   "description": "",
   "main": "lib/abstract_numerical_unit.js",
   "directories": {
-    "lib": "lib",
-    "src": "src",
-    "spec": "spec"
+    "lib": "lib"
   },
   "dependencies": {},
   "devDependencies": {
