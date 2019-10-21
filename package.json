@@ -1,6 +1,6 @@
 {
   "name": "abstract-numerical-unit",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "main": "lib/abstract_numerical_unit.js",
   "directories": {
