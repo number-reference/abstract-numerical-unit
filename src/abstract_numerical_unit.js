@@ -15,11 +15,12 @@ module.exports = class AbstractNumericalUnit {
     this.next = next == null ? null : next;
   }
 
-  /*
-   * Returns true whenever *this digit* has a nonzero value
-   */
-  isNonZero(): boolean {
-    return this.value !== 0;
+  isOne(): boolean {
+    return this.value === 1 && this.power === 0 && this.next == null;
+  }
+
+  isZero(): boolean {
+    return this.value === 0 && this.power === 0 && this.next == null;
   }
 
   /*
