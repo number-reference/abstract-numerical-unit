@@ -71,6 +71,17 @@ module.exports = class AbstractNumericalUnit {
     return this;
   }
 
+  /*
+   * Returns the last unit in the stack
+   */
+  tail(): this {
+    let cursor = this;
+    while (cursor.next != null) {
+      cursor = cursor.next;
+    }
+    return cursor;
+  }
+
   toString(): string {
 		return `AbstractNumericalUnit { p: ${this.power}, v: ${this.value}, n: ${this.next == null ? 'null' : this.next.toString()} }`
   }
