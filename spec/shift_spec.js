@@ -16,5 +16,3 @@ describe("Invert", () => {
     });
   });
 });
-
-console.log('All tests passsed');
