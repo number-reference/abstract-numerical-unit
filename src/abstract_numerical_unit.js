@@ -58,17 +58,6 @@ module.exports = class AbstractNumericalUnit {
     );
   }
 
-  /*
-   * Negates the power of each member in the stack
-   */
-  reciprocal(): this {
-    let cursor = this;
-    while (cursor != null) {
-      cursor.power *= -1;
-      cursor = cursor.next;
-    }
-    return this;
-  }
 
   toString(): string {
 		return `AbstractNumericalUnit { p: ${this.power}, v: ${this.value}, n: ${this.next == null ? 'null' : this.next.toString()} }`
