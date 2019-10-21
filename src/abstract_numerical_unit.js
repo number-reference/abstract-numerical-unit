@@ -59,6 +59,17 @@ module.exports = class AbstractNumericalUnit {
     );
   }
 
+  /*
+   * Increases the power of all units by `digits`.  Negative inputs supported.
+   */
+  shift(digits: number): this {
+    let cursor = this;
+    while (cursor != null) {
+      cursor.power += digits;
+      cursor = cursor.next;
+    }
+    return this;
+  }
 
   toString(): string {
 		return `AbstractNumericalUnit { p: ${this.power}, v: ${this.value}, n: ${this.next == null ? 'null' : this.next.toString()} }`
