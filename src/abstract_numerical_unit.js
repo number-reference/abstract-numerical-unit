@@ -54,7 +54,7 @@ module.exports = class AbstractNumericalUnit {
     return new this.constructor(
       this.power,
       this.value,
-      this.next,
+      (this.next != null) ? this.next.copy() : null,
     );
   }
 
